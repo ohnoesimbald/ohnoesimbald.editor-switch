@@ -1,0 +1,17 @@
+{
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "ohnoesimbald.editor-switch",
+	"name": "editor tab switch",
+	"version": "v0.2.0",
+	"developer": "OhNoesImBald",
+	"description": "switches the play button and the create tab bc no one even touches the main levels after they beat them",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	}
+}

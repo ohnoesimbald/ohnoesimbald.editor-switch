@@ -1,3 +1,6 @@
+## 1.1.0
+added settings to toggle the mod on and off
+
 ## 1.0.25
 added tags and .gitignore to build/
 

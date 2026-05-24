@@ -12,7 +12,7 @@ class $modify(MenuLayer) {
         auto playBtn = mainMenu->getChildByID("play-button");
         auto editorBtn = mainMenu->getChildByID("editor-button");
 
-        if (playBtn && editorBtn) {
+        if (playBtn && editorBtn && Mod::get()->getSettingValue<bool>("enabled")) {
             auto playPos = playBtn->getPosition();
             auto editorPos = editorBtn->getPosition();
             playBtn->setPosition(editorPos);

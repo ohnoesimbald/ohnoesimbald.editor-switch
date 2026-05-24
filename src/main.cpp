@@ -26,11 +26,12 @@ class $modify(PlayerObject) {
         if (Mod::get()->getSettingValue<bool>("joke")) {
             FMODAudioEngine::get()->playEffect((Mod::get()->getResourcesDir() / "lobotomy-sound-effect.ogg").string().c_str());
             auto imagePath = (Mod::get()->getResourcesDir() / "soggy imagae.png").string();
-            log::info("Image path: {}", imagePath);
-            auto texture = CCTextureCache::get()->addImage(imagePath.c_str(), false);
-            log::info("Texture: {}", (void*)texture);
-            if (!texture) return;
+            auto ccImage = new CCImage();
+            ccImage->initWithImageFile(imagePath.c_str());
+            auto texture = new CCTexture2D();
+            texture->initWithImage(ccImage);
             auto image = CCSprite::createWithTexture(texture);
+            ccImage->release();
             if (image) {
                 auto scene = CCDirector::get()->getRunningScene();
                 auto size = CCDirector::get()->getWinSize();

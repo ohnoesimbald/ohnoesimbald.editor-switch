@@ -25,9 +25,10 @@
 		},
 		"joke" : {
 			"name": "do not",
-			"description": "do not"
-			"type": "bool"
+			"description": "do not",
+			"type": "bool",
 			"default": false
+		}
 	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"

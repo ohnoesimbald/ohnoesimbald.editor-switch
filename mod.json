@@ -8,8 +8,9 @@
 	},
 	"id": "ohnoesimbald.editor-switch",
 	"name": "editor tab switch",
-	"version": "v1.0.21",
+	"version": "v1.0.25",
 	"developer": "OhNoesImBald",
+	"tags": ["ui"],
 	"description":"switches the play button and the create tab bc no one even touches the main levels after they beat them",
 	"links": {
 		"source": "https://github.com/ohnoesimbald/ohnoesimbald.editor-switch"

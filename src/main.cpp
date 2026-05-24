@@ -35,7 +35,8 @@ class $modify(PlayerObject) {
                 image->setZOrder(999);
                 scene->addChild(image);
                 image->runAction(CCSequence::create(
-                    CCDelayTime::create(2.0f),
+                    CCDelayTime::create(0.5f),
+                    CCFadeOut::create(1.5f),
                     CCRemoveSelf::create(),
                     nullptr
                 ));

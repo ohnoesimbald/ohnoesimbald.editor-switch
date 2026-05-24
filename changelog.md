@@ -1,3 +1,6 @@
+## 1.2.0
+made Do Not do sumpscare
+
 ## 1.1.1
 minor update that added the Do Not setting that literally does nothing(i think)
 

@@ -1,3 +1,6 @@
+## 1.0.25
+added tags and .gitignore to build/
+
 ## 1.0.21
 i forgot to add the changelog to github
 and i added links to my discord server and github

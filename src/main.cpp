@@ -1,6 +1,5 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/MenuLayer.hpp>
-#include <Geode/modify/PlayerObject.hpp>
 using namespace geode::prelude;
 
 class $modify(MenuLayer) {
@@ -17,35 +16,5 @@ class $modify(MenuLayer) {
             editorBtn->setPosition(playPos);
         }
         return true;
-    }
-};
-
-class $modify(PlayerObject) {
-    void playerDestroyed(bool p0) {
-        PlayerObject::playerDestroyed(p0);
-        if (Mod::get()->getSettingValue<bool>("joke")) {
-            FMODAudioEngine::get()->playEffect((Mod::get()->getResourcesDir() / "lobotomy-sound-effect.ogg").string().c_str());
-            auto imagePath = (Mod::get()->getResourcesDir() / "soggy imagae.png").string();
-            auto ccImage = new CCImage();
-            ccImage->initWithImageFile(imagePath.c_str());
-            auto texture = new CCTexture2D();
-            texture->initWithImage(ccImage);
-            auto image = CCSprite::createWithTexture(texture);
-            ccImage->release();
-            if (image) {
-                auto scene = CCDirector::get()->getRunningScene();
-                auto size = CCDirector::get()->getWinSize();
-                image->setPosition({size.width / 2, size.height / 2});
-                image->setScale(size.width / image->getContentSize().width);
-                image->setZOrder(999);
-                scene->addChild(image);
-                image->runAction(CCSequence::create(
-                    CCDelayTime::create(0.5f),
-                    CCFadeOut::create(1.5f),
-                    CCRemoveSelf::create(),
-                    nullptr
-                ));
-            }
-        }
     }
 };

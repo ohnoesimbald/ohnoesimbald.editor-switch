@@ -25,10 +25,10 @@ class $modify(PlayerObject) {
         PlayerObject::playerDestroyed(p0);
         if (Mod::get()->getSettingValue<bool>("joke")) {
             FMODAudioEngine::get()->playEffect((Mod::get()->getResourcesDir() / "lobotomy-sound-effect.ogg").string().c_str());
-
             auto texture = CCTextureCache::get()->addImage((Mod::get()->getResourcesDir() / "soggy imagae.png").string().c_str(), false);
             auto image = CCSprite::createWithTexture(texture);
             if (image) {
+                auto scene = CCDirector::get()->getRunningScene();
                 auto size = CCDirector::get()->getWinSize();
                 image->setPosition({size.width / 2, size.height / 2});
                 image->setScale(size.width / image->getContentSize().width);

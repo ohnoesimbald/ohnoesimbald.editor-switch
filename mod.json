@@ -8,7 +8,7 @@
 	},
 	"id": "ohnoesimbald.editor-switch",
 	"name": "editor tab switch",
-	"version": "v1.1.0",
+	"version": "v1.1.1",
 	"developer": "OhNoesImBald",
 	"tags": ["ui"],
 	"description":"switches the play button and the create tab bc no one even touches the main levels after they beat them",
@@ -17,12 +17,17 @@
 		"community": "https://discord.gg/ExU4jgsTJJ"
 	},
 	"settings": {
-		"enabled" : {
+		"toggle" : {
 			"name": "Enable Swap",
 			"description": "enables the swap so you dont have to turn the mod off and on",
 			"type": "bool",
 			"default": true
-		}
+		},
+		"joke" : {
+			"name": "do not",
+			"description": "do not"
+			"type": "bool"
+			"default": false
 	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"

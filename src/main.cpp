@@ -22,9 +22,24 @@ class $modify(MenuLayer) {
 
 class $modify(PlayerObject) {
     void playerDestroyed(bool p0) {
-        if (Mod::get()->getSettingValue<bool>("joke")) {
-            FMODAudioEngine::get()->playEffect("explode_11.ogg");
-        }
         PlayerObject::playerDestroyed(p0);
+        if (Mod::get()->getSettingValue<bool>("joke")) {
+            FMODAudioEngine::get()->playEffect("ohnoesimbald.editor-switch/lobotomy-sound-effect.ogg");
+
+            auto scene = CCDirector::get()->getRunningScene();
+            auto image = CCSprite::create("ohnoesimbald.editor-switch/soggy imagae.png");
+            if (image) {
+                auto size = CCDirector::get()->getWinSize();
+                image->setPosition({size.width / 2, size.height / 2});
+                image->setScale(size.width / image->getContentSize().width);
+                image->setZOrder(999);
+                scene->addChild(image);
+                image->runAction(CCSequence::create(
+                    CCDelayTime::create(2.0f),
+                    CCRemoveSelf::create(),
+                    nullptr
+                ));
+            }
+        }
     }
 };

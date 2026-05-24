@@ -16,6 +16,14 @@
 		"source": "https://github.com/ohnoesimbald/ohnoesimbald.editor-switch"
 		"community": "https://discord.gg/ExU4jgsTJJ"
 	},
+	"settings": {
+		"enabled" : {
+			"name": "Enable Swap"
+			"description": "enables the swap so you dont have to turn the mod off and on"
+			"type": "bool"
+			"default": true
+		}
+	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 	}

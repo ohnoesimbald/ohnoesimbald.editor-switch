@@ -1,3 +1,6 @@
+## 1.1.1
+minor update that added the Do Not setting that literally does nothing(i think)
+
 ## 1.1.0
 added settings to toggle the mod on and off
 

@@ -13,7 +13,7 @@
 	"tags": ["ui"],
 	"description":"switches the play button and the create tab bc no one even touches the main levels after they beat them",
 	"links": {
-		"source": "https://github.com/ohnoesimbald/ohnoesimbald.editor-switch"
+		"source": "https://github.com/ohnoesimbald/ohnoesimbald.editor-switch",
 		"community": "https://discord.gg/ExU4jgsTJJ"
 	},
 	"settings": {

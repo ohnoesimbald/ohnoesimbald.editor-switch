@@ -18,9 +18,9 @@
 	},
 	"settings": {
 		"enabled" : {
-			"name": "Enable Swap"
-			"description": "enables the swap so you dont have to turn the mod off and on"
-			"type": "bool"
+			"name": "Enable Swap",
+			"description": "enables the swap so you dont have to turn the mod off and on",
+			"type": "bool",
 			"default": true
 		}
 	},

@@ -9,10 +9,10 @@ class $modify(MenuLayer) {
         if (!mainMenu) return true;
         auto playBtn = mainMenu->getChildByID("play-button");
         auto editorBtn = mainMenu->getChildByID("editor-button");
-        if (playBtn && editorBtn && Mod::get()->getSettingValue<bool>("toggle")) {
+        if (playBtn && editorBtn && Mod::get()->getSettingValue<bool>("toggle")) {        //the button thingy that toggles the mod
             auto playPos = playBtn->getPosition();
             auto editorPos = editorBtn->getPosition();
-            playBtn->setPosition(editorPos);
+            playBtn->setPosition(editorPos);          //makes the play button switch places with the editor
             editorBtn->setPosition(playPos);
         }
         return true;

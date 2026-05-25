@@ -22,12 +22,6 @@
 			"description": "enables the swap so you dont have to turn the mod off and on",
 			"type": "bool",
 			"default": true
-		},
-		"joke" : {
-			"name": "do not",
-			"description": "do not",
-			"type": "bool",
-			"default": false
 		}
 	},
 	"dependencies": {

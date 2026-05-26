@@ -1,4 +1,4 @@
- name: Build Geode Mod
+name: Build Geode Mod
 
 on:
   push:
@@ -15,9 +15,9 @@ jobs:
         run: git clone https://github.com/geode-sdk/geode.git $env:USERPROFILE\geode
 
       - name: Configure
-          run: |
-            $env:GEODE_SDK="$env:USERPROFILE\geode"
-            cmake -B build
+        run: |
+          $env:GEODE_SDK="$env:USERPROFILE\geode"
+          cmake -B build
 
       - name: Build
         run: cmake --build build --config Release

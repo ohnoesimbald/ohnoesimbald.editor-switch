@@ -14,6 +14,12 @@ jobs:
       - name: Clone Geode
         run: git clone https://github.com/geode-sdk/geode.git $env:USERPROFILE\geode
 
+      - name: Install Geode CLI
+        run: pip install geode-cli
+
+      - name: Install Geode Binaries
+        run: geode sdk install-binaries
+
       - name: Configure
         run: |
           $env:GEODE_SDK="$env:USERPROFILE\geode"

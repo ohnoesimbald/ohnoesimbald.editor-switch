@@ -6,12 +6,12 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "ohnoesimbald.editor-switch",
+	"id": "ohnoesimbald.editor-tab-switch",
 	"name": "editor tab switch",
 	"version": "v1.0.0",
 	"developer": "OhNoesImBald",
 	"tags": ["interface", "joke", "offline"],
-	"description":"switches the play button and the create tab bc no one even touches the main levels after they beat them",
+	"description":"switches the play tab and create tab",
 	"links": {
 		"source": "https://github.com/ohnoesimbald/ohnoesimbald.editor-switch",
 		"community": "https://discord.gg/ExU4jgsTJJ"
@@ -19,7 +19,7 @@
 	"settings": {
 		"toggle" : {
 			"name": "Enable Swap",
-			"description": "enables the swap so you dont have to turn the mod off and on",
+			"description": "enables the swap so you dont have to disable the mod on and off",
 			"type": "bool",
 			"default": true
 		}

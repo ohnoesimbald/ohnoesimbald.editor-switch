@@ -8,16 +8,13 @@ class $modify(MenuLayer) {
         if (!MenuLayer::init())
             return false;
 
-        // get main menu
         auto mainMenu = this->getChildByID("main-menu");
         if (!mainMenu)
             return true;
 
-        // get buttons
         auto playBtn = mainMenu->getChildByID("play-button");
         auto editorBtn = mainMenu->getChildByID("editor-button");
 
-        // check if buttons exist and mod is enabled
         if (
             playBtn &&
             editorBtn &&
@@ -28,25 +25,17 @@ class $modify(MenuLayer) {
             CCPoint playPos = playBtn->getPosition();
             CCPoint editorPos = editorBtn->getPosition();
 
-            // save ORIGINAL scales
-            float playScale = playBtn->getScale();
-            float editorScale = editorBtn->getScale();
-
-            // make anchor points consistent
-            playBtn->setAnchorPoint({ 0.5f, 0.5f });
-            editorBtn->setAnchorPoint({ 0.5f, 0.5f });
-
             // swap positions
             playBtn->setPosition(editorPos);
             editorBtn->setPosition(playPos);
 
-            // swap scales too
-            playBtn->setScale(editorScale);
-            editorBtn->setScale(playScale);
+            // force visual scaling manually
+            playBtn->setScale(0.55f);
+            editorBtn->setScale(0.9f);
 
-            // refresh sizes
-            playBtn->setContentSize(playBtn->getScaledContentSize());
-            editorBtn->setContentSize(editorBtn->getScaledContentSize());
+            // fix anchor points
+            playBtn->setAnchorPoint({ 0.5f, 0.5f });
+            editorBtn->setAnchorPoint({ 0.5f, 0.5f });
         }
 
         return true;

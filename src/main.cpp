@@ -14,6 +14,8 @@ class $modify(MenuLayer) {
             auto editorPos = editorBtn->getPosition();
             playBtn->setPosition(editorPos); //makes the play button switch places with the editor
             editorBtn->setPosition(playPos);
+            playBtn->setScale(0.65f) //scalle button dipshit
+            editorBtn->setScale(0.5f) 
         }
         return true;
     }

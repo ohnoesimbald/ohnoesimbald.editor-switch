@@ -8,7 +8,7 @@
 	},
 	"id": "ohnoesimbald.editor-tab-switch",
 	"name": "editor tab switch",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "OhNoesImBald",
 	"tags": ["interface", "joke", "offline"],
 	"description":"switches the play tab and create tab",
